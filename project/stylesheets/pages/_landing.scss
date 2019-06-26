@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.section{
+	&-title {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+	&-subtitle {
+		font-family: $decor-font-stack;
+		font-weight: normal;
+	}
+}
+
+
+//====== Front Page ======
+
+.front-page {
+	background-image: url('#{$base-url}images/pp-main-background.jpg');
+	color: #fff;
+	padding: 200px 0 100px 0;
+}
+.front-page p {
+	margin: 1.8em auto;
+	max-width: 45em;
+	color: white;
+	line-height: 1.8;
+}
