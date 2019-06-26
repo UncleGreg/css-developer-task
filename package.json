@@ -1,0 +1,18 @@
+{
+  "name": "css-developer-task",
+  "version": "1.0.0",
+  "description": "CSS Developer task for JohnnyBros",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch project/stylesheets/main.scss project/build/stylesheets/main.css",
+    "preview:live": "./node_modules/live-server/live-server.js project --no-browser --verbose ",
+    "dev": "parallelshell 'npm run watch' 'npm run preview:live'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "parallelshell": "^3.0.2",
+    "sass": "^1.22.0"
+  }
+}
