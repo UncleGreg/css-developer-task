@@ -8,17 +8,24 @@
 <body>
 	<div class="project-overlay"></div>
 	<header>
-		<nav>
-			<ul class="nav-menu">
-				<li class="nav-menu__logo"><a href="/">Logo</a></li>
-				<li><a href="/">Logo</a></li>
-				<li><a href="/">Logo</a></li>
-				<li><a href="/">Logo</a></li>
-				<li><a href="/">Logo</a></li>
-				<li><a href="/">Logo</a></li>
-			</ul>
+		<nav class="nav">
+			<div class="container">
+				<ul class="nav__menu">
+					<li class="nav__logo">
+						<a href="/">
+							<img src="/assets/images/jb-logo.svg" alt="johnnybros logo">
+						</a>
+					</li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/">O Turnieju</a></li>
+					<li><a href="/">Nagrody</a></li>
+					<li><a href="/">Jak dołączyć</a></li>
+					<li><a href="/">Kontakt</a></li>
+				</ul>
+			</div>
 		</nav>
 	</header>
+
 	<section class="front-page">
 		<div class="container text-center">
 			<h4 class="section-title">Turniej piłkarzyków</h4>
@@ -27,9 +34,46 @@
 		<div class="front-page__button-wrap">
 			<button class="button">Dołącz do turnieju</button>
 		</div>
-		<div>
-			<a href="#about" class="front-page__arrow">^</a>
+		<div class="text-center">
+			<a href="#about" class="front-page__scroll-arrow"></a>
 		</div>
+		</div>
+	</section>
+
+	<section class="about">
+		<div class="container">
+			<div class="about__boxes">
+				<div class="about__column">
+					<div class="about__text-box">
+						<h4 class="section-title">O turnieju</h4>
+						<h3 class="section-subtitle">Graj z najlepszymi, poczuj ducha rywalizacji i wiatr we włosach</h3>
+						<p>Party Parrot Tournament to turniej piłkarzyków, który oferuje jego uczestnikom niezwykłe doznania, akie jak duże ilości dokuczliwych żartów ze strony drużyny przeciwnej i frustrujące porażki, ale także satysfakcjonujące zwycięstwa oraz możliwość zobaczenia grymasu na twarzy osoby, którą właśnie pokonałeś 10 - 0. Brzmi ciekawie?</p>
+						<button class="button">Dołącz do turnieju</button>
+					</div>
+					<div class="about__stats-box">
+						<h4 class="text-center section-title">Dzienne statystyki</h4>
+						<div class="about__stats-container">
+							<div class="about__stats-item text-center">
+								<div class="about__stats-number">90</div>
+								<div class="about__stats-category">Rozegranych meczów</div>
+							</div>
+							<div class="about__stats-item text-center">
+								<div class="about__stats-number">1530</div>
+								<div class="about__stats-category">Rozegranych meczów</div>
+							</div>
+							<div class="about__stats-item text-center">
+								<div class="about__stats-number">3</div>
+								<div class="about__stats-category">Rozegranych meczów</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="about__column">
+					<div class="about__image-wrap">
+					<img src="/assets/images/pp-foosball-match.jpg" alt="zdjęcie stołu do piłkarzyków">
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 </body>

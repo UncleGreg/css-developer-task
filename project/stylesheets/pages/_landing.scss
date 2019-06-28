@@ -5,11 +5,13 @@
 .section{
 	&-title {
 		text-transform: uppercase;
-		letter-spacing: 2px;
+		letter-spacing: 1.5px;
 	}
 	&-subtitle {
 		font-family: $decor-font-stack;
 		font-weight: normal;
+		margin: 12px 0;
+		letter-spacing: -0.2px;
 	}
 }
 
@@ -18,12 +20,101 @@
 
 .front-page {
 	background-image: url('#{$base-url}images/pp-main-background.jpg');
+	background-size: cover;
+	background-position: center center;
 	color: #fff;
-	padding: 200px 0 100px 0;
+	padding: 225px 0 92px 0;
+	h1 {
+		letter-spacing: -1.5px;
+		word-spacing: 1px;
+	}
+	p {
+		margin: 1.8em auto;
+		max-width: 40em;
+		color: #fff;
+		line-height: 1.6;
+		word-spacing: .5px;
+	}
+	&__button-wrap {
+		margin: 55px 0;
+	}
+	&__scroll-arrow {
+		display: inline-block;
+		color: #fff;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		height: 2em;
+		width: 2em;
+		position: relative;
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			height: 10px;
+			width: 10px;
+			font-weight:bold;
+			transform: translate(-50%, -50%) rotate(45deg);
+			border-right: 3px solid #fff;
+			border-bottom: 3px solid #fff;
+		}
+
+	}
 }
-.front-page p {
-	margin: 1.8em auto;
-	max-width: 45em;
-	color: white;
-	line-height: 1.8;
+
+//====== About ======
+
+.about {
+	background-color: #f5f5f5;
+	&__column {
+		flex:1;
+	}
+	&__boxes {
+		display: flex;
+		transform: translateY(100px);
+	}
+	&__text-box {
+		background-color: #fff;
+		padding: 50px;
+		p {
+			margin-bottom: 30px;
+		}
+	}
+	&__stats {
+		&-box {
+			background-color: #3fae49;
+			padding: 2em;
+			color: #fff;
+			margin: 0 30px 0 64px;
+		}
+		&-container {
+			display:flex;
+		}
+		&-number {
+			font-size: 2.5em;
+			font-family: $decor-font-stack
+		}
+		&-category {
+			font-size: .8em;
+			font-weight: bold;
+		}
+	}
+	&__image-wrap {
+		width: 595px;
+		position:relative;
+		z-index: -1;
+		img {
+			transform: translate(-90px, 70px);
+			height: 460px;
+		}
+	}
 }
+
+.example {
+    transition: all .5s;
+    user-select: none;
+		display:grid;
+    background: linear-gradient(to bottom, white, black);
+}
+

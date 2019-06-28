@@ -2,14 +2,34 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
-.nav-menu {
+.nav {
 	position: fixed;
 	top:0;
 	left: 0;
 	width: 100%;
-	display: flex;
+	padding: 1.2em;
+	&__menu {
+		display: flex;
+		a {
+			display: inline-block;
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 15px;
+			padding-right: 30px;
+			padding-top: .5em;
+			letter-spacing: -0.75px;
+		}
+		li:last-of-type {
+			a {
+				padding-right: 0;
+			}
+		}
+	}
 	&__logo{
-		background-color: red;
 		flex: 1;
+		a {
+			padding: 0;
+		}
 	}
 }

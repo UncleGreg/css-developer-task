@@ -10,10 +10,11 @@ html {
 }
 .project-overlay{
 	background-image: url('../../assets/desktop.png');
-	background-size: cover;
+	background-size: 1904px auto;
+	background-position: center 2px;
 	width: 100%;
 	height: 2000px;
-	position:absolute;
+	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 1000;
@@ -45,6 +46,11 @@ a {
     text-decoration: underline;
   }
 }
+
+button {
+  font-family: $text-font-stack;
+}
+
 h1,h2,h3,h4,h5{
 	margin: 0;
 }
@@ -58,10 +64,3 @@ li {
 	list-style: none;
 }
 
-.container {
-	width: 1200px;
-}
-
-.text-center {
-	text-align: center;
-}
