@@ -21,3 +21,10 @@
 	font-style: normal;
 	font-weight: 500;
 }
+
+@font-face {
+	font-family : 'Raleway';
+	src:  url('#{$base-url}fonts/Raleway/Raleway-Bold.ttf');
+	font-style: normal;
+	font-weight: 600;
+}

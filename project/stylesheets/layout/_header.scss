@@ -4,21 +4,29 @@
 
 .nav {
 	position: fixed;
+  z-index: 100;
 	top:0;
 	left: 0;
 	width: 100%;
 	padding: 1.2em;
+  transition: background-color .2s, padding .3s;
+  &.scrolled {
+    background-color: #1e3066;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2); 
+    padding: .8em 0 .6em;
+    
+  }
 	&__menu {
 		display: flex;
 		a {
 			display: inline-block;
 			color: #fff;
 			text-transform: uppercase;
-			font-weight: bold;
+			font-weight: 600;
 			font-size: 15px;
 			padding-right: 30px;
 			padding-top: .5em;
-			letter-spacing: -0.75px;
+      letter-spacing: 0.0060em
 		}
 		li:last-of-type {
 			a {

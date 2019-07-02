@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
 	<meta charset="UTF-8">
 	<title>CSS Developer Task</title>
 	<link rel="stylesheet" type="text/css" href="build/stylesheets/main.css">
+	<script
+			  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+			  crossorigin="anonymous"></script>
 </head>
 <body>
 	<div class="project-overlay"></div>
@@ -28,8 +33,8 @@
 
 	<section class="front-page">
 		<div class="container text-center">
-			<h4 class="section-title">Turniej piłkarzyków</h4>
-		<h1 class="section-subtitle">Party Parrot Tournament</h1>
+			<h4 class="section-title section-title--white">Turniej piłkarzyków</h4>
+		<h1 class="section-subtitle section-subtitle--white">Party Parrot Tournament</h1>
 		<p>Czy masz już dosyć nudnej codzienności, potrzebujesz nowych doznań, lub po prostu chcesz wymiatać w piłkarzykach? W takim wypadku możesz być pewien, że turniej piłkarzyków Party Parrot jest stworzony dla Ciebie!</p>
 		<div class="front-page__button-wrap">
 			<button class="button">Dołącz do turnieju</button>
@@ -43,7 +48,7 @@
 	<section class="about">
 		<div class="container">
 			<div class="about__boxes">
-				<div class="about__column">
+				<div class="about__column about__column--left">
 					<div class="about__text-box">
 						<h4 class="section-title">O turnieju</h4>
 						<h3 class="section-subtitle">Graj z najlepszymi, poczuj ducha rywalizacji i wiatr we włosach</h3>
@@ -51,7 +56,7 @@
 						<button class="button">Dołącz do turnieju</button>
 					</div>
 					<div class="about__stats-box">
-						<h4 class="text-center section-title">Dzienne statystyki</h4>
+						<h4 class="text-center section-title section-title--white">Dzienne statystyki</h4>
 						<div class="about__stats-container">
 							<div class="about__stats-item text-center">
 								<div class="about__stats-number">90</div>
@@ -59,11 +64,11 @@
 							</div>
 							<div class="about__stats-item text-center">
 								<div class="about__stats-number">1530</div>
-								<div class="about__stats-category">Rozegranych meczów</div>
+								<div class="about__stats-category">Strzelonych<br> bramek</div>
 							</div>
 							<div class="about__stats-item text-center">
 								<div class="about__stats-number">3</div>
-								<div class="about__stats-category">Rozegranych meczów</div>
+								<div class="about__stats-category">Litry potu</div>
 							</div>
 						</div>
 					</div>
@@ -76,5 +81,119 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="prizes">
+		<div class="container">
+			<div class="text-center">
+				<h4 class="section-title">nagrody</h4>
+				<h3 class="section-subtitle">Dla pięciu najlepszych graczy<br>przygotowano specjalne nagrody</h3>
+			</div>
+			<div class="prizes__list">
+				<div class="prizes__item active">
+					<div class="prizes__image">
+						<img src="/assets/images/pp-reward-1.svg" alt="">
+					</div>
+					<div class="prizes__description">Uścisk dłoni <br>prezesa</div>
+				</div>		
+				<div class="prizes__item">
+					<div class="prizes__image">
+						<img src="/assets/images/pp-reward-2.svg" alt="">
+					</div>
+					<div class="prizes__description">Roczna prenumerata<br> gazety ,,Wędkarski<br> Świat"</div>
+				</div>		
+				<div class="prizes__item">
+					<div class="prizes__image">
+						<img src="/assets/images/pp-reward-3.svg" alt="">
+					</div>
+					<div class="prizes__description">Trial na stronie do<br> skracania linków ujeb.se</div>
+				</div>		
+				<div class="prizes__item">
+					<div class="prizes__image">
+						<img src="/assets/images/pp-reward-4.svg" alt="">
+					</div>
+					<div class="prizes__description">Licencja programu <br> WinRar</div>
+				</div>		
+				<div class="prizes__item">
+					<div class="prizes__image">
+						<img src="/assets/images/pp-reward-5.svg" alt="">
+					</div>
+					<div class="prizes__description">Możliwość pracy <br>po godzinach</div>
+				</div>		
+			</div>
+		</div>
+	</section>
+
+	<section class="how-to">
+		<div class="container">
+			<div class="how-to__boxes">
+				<div class="how-to__text-box">
+					<h4 class="section-title">Jak dołączyć?</h4>
+					<h3 class="section-subtitle">Wystarczy chwila, aby móc cieszyć się piłkarzykami!</h3>
+					<p>Zachęciły Cię nagrody lub wizja momentów pełnych satysfakcji i chcesz dołączyć do turnieju? Zarejestruj się na naszym serwisie i zacznij cieszyć się emocjami przy stole do piłkarzyków!</p>
+					<button class="button">Dołącz do turnieju</button>
+				</div>
+				<div class="how-to__quote-box">
+					<p>Nic jeszcze we mnie nie wzbudziło większych emocji niż Turniej Piłkarzyków Party Parrot. Świetna zabawa i idealny sposób na integrację pracowników. Chcesz wiedzieć jak poznałam bliżej ekipę z pracy? Grałam z nimi w piłkarzyki. To niby takie proste, a jednak gdy ukryty gen rywalizacji sportowej powoduje, że poznajesz tę samą osobę od innej strony. Masa śmiechu gwarantowana. Dzięki Turniejowi Party Parrot mogłam zostać Lewandowskim w spódnicy, a co!
+					</p>
+					<div class="how-to__social-proof">
+						<div class="how-to__social-proof__image">
+							<img src="/assets/images/pp-social-proof.png" alt="">
+						</div>
+						<div>
+							<div class="how-to__social-proof__name">Jolanta</div>
+							<div class="how-to__social-proof__position">analityk SEO na rynek niemiecki</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="contact">
+		<div class="container">
+			<div class="display-flex contact-flex">
+				<div class="contact__image"></div>
+				<div class="contact__form">
+					<h4 class="section-title">kontakt</h4>
+					<h3 class="section-subtitle">Napisz do nas!</h3>
+					<form action="">
+						<div class="display-flex form__row">
+							<div class="form__group">
+								<input type="imie">
+								<label for="">Imię i nazwisko</label>
+							</div>
+							<div class="form__group">
+								<input type="imie">
+								<label for="">Adres e-mail</label>
+							</div>
+						</div>
+
+						<div class="form__row">
+							<textarea id="" name="" placeholder="Treść wiadomości"></textarea>
+						</div>
+						<div class="form__row">
+							<button class="button">Wyślij wiadomość</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="text-center">
+			<div class="footer__text">© JohnnyBros 2018</div>
+		</div>
+		
+	</footer>
+
+	<script>
+		$(function() {
+			var header = $(".nav");
+			$(window).scroll(function() {
+				var scroll = $(window).scrollTop();
+				scroll >= 100 ? header.addClass("scrolled") : header.removeClass("scrolled");
+			});
+		});	
+	
+	</script>
 </body>
 </html>
