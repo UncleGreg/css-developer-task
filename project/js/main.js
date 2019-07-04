@@ -9,16 +9,20 @@ $(function() {
 });	
 
 // navigation open/close
-$("#js-menu-button").on('click', function() {
-  var menu = $("#js-menu");
-  var button = $("#js-menu-button");
-  var overlay = $("#js-menu-overlay");
+var menu = $("#js-menu");
+var menuButton = $("#js-menu-button");
+var overlay = $("#js-menu-overlay");
 
+menuButton.on('click', function() {
   menu.toggleClass("opened");
-  button.toggleClass("opened");
+  menuButton.toggleClass("opened");
   overlay.toggleClass("opened");
-
 });
+
+$("#js-menu li").click(function () {
+  menu.removeClass('opened');
+  overlay.removeClass('opened');
+})
 
 //smooth scroll
 $('a[href*="#"]').on('click', function(e) {
