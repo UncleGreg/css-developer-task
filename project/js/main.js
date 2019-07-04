@@ -22,6 +22,7 @@ menuButton.on('click', function() {
 $("#js-menu li").click(function () {
   menu.removeClass('opened');
   overlay.removeClass('opened');
+  menuButton.removeClass('opened');
 })
 
 //smooth scroll
