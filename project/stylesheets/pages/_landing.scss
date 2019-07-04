@@ -3,116 +3,115 @@
 // -----------------------------------------------------------------------------
 
 .section {
-	&-title {
-		text-transform: uppercase;
-		letter-spacing: 0.134em;
+  &-title {
+    text-transform: uppercase;
+    letter-spacing: 0.134em;
     color: $text-color-gray;
     &--white {
       color: $text-color-light;
     }
-	}
-	&-subtitle {
-		font-family: $decor-font-stack;
-		font-weight: normal;
-		margin: 11px 0;
-		letter-spacing: -0.007em;
+  }
+  &-subtitle {
+    font-family: $decor-font-stack;
+    font-weight: normal;
+    margin: 11px 0;
+    letter-spacing: -0.007em;
     color: $text-color-dark;
     &--white {
       color: $text-color-light;
     }
-	}
+  }
 }
 
 //====== Front Page ======
 
 .front-page {
-	background-image: url('#{$base-url}images/pp-main-background.jpg');
-	background-size: cover;
-	background-position: center center;
-	color: $text-color-light;
-	padding: 225px 0 92px 0;
+  background-image: url("#{$base-url}images/pp-main-background.jpg");
+  background-size: cover;
+  background-position: center center;
+  color: $text-color-light;
+  padding: 225px 0 92px 0;
   @include tablet {
     padding: 170px 0 80px 0;
   }
   @include mobile {
     padding: 92px 0 20px 0;
   }
-	h1 {
-		letter-spacing: -1.5px;
-		word-spacing: 1px;
-	}
-	p {
-		margin: 1.8em auto;
-		max-width: 40em;
-		color: $text-color-light;
-		line-height: 1.6;
-		word-spacing: .5px;
+  h1 {
+    letter-spacing: -1.5px;
+    word-spacing: 1px;
+  }
+  p {
+    margin: 1.8em auto;
+    max-width: 40em;
+    color: $text-color-light;
+    line-height: 1.6;
+    word-spacing: 0.5px;
     @include mobile {
       margin: 1.5em auto;
     }
-	}
-	&__button-wrap {
-		margin: 55px 0;
+  }
+  &__button-wrap {
+    margin: 55px 0;
     @include tablet {
       margin: 40px 0;
     }
     @include mobile {
       margin: 23px 0 18px;
     }
-	}
-	&__scroll-arrow {
-		display: inline-block;
-		color: $text-color-light;
-		border: 2px solid $text-color-light;
-		border-radius: 50%;
-		height: 2em;
-		width: 2em;
-		position: relative;
-    transition: transform .2s;
+  }
+  &__scroll-arrow {
+    display: inline-block;
+    color: $text-color-light;
+    border: 2px solid $text-color-light;
+    border-radius: 50%;
+    height: 2em;
+    width: 2em;
+    position: relative;
+    transition: transform 0.2s;
     @include mobile {
-      transform: scale(.8);
+      transform: scale(0.8);
     }
     &:hover {
-      transform: scale(.9);
+      transform: scale(0.9);
     }
-		&::after {
-			content: "";
-			display: block;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			height: 10px;
-			width: 10px;
-			font-weight:bold;
-			transform: translate(-50%, -50%) rotate(45deg);
-			border-right: 3px solid $text-color-light;
-			border-bottom: 3px solid $text-color-light;
-		}
-
-	}
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 10px;
+      width: 10px;
+      font-weight: bold;
+      transform: translate(-50%, -50%) rotate(45deg);
+      border-right: 3px solid $text-color-light;
+      border-bottom: 3px solid $text-color-light;
+    }
+  }
 }
 
 //====== About ======
 
 .about {
-	background-color: $bg-color-light;
+  background-color: $bg-color-light;
   box-shadow: inset 0 -43px 0 0 $text-color-light;
   @include tablet {
     box-shadow: inset 0 -81px 0 0 $text-color-light;
   }
-	&__boxes {
-		display: flex;
-		transform: translateY(100px);
+  &__boxes {
+    display: flex;
+    transform: translateY(100px);
     @include tablet {
       flex-direction: column;
-		  transform: translateY(70px);
+      transform: translateY(70px);
     }
     @include mobile {
-		  transform: translateY(40px);
+      transform: translateY(40px);
     }
-	}
-	&__column {
-		flex:1;
+  }
+  &__column {
+    flex: 1;
     &--left {
       @include tablet {
         display: flex;
@@ -121,13 +120,12 @@
         flex-direction: column;
       }
     }
-	}
-	&__text-box {
-		background-color: $text-color-light;
-		padding: 50px 50px 48px 48px;
+  }
+  &__text-box {
+    background-color: $text-color-light;
+    padding: 50px 50px 48px 48px;
     border-radius: 2px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08),
-                0 2px 6px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.08);
     position: relative;
     z-index: 2;
     @include tablet {
@@ -139,22 +137,21 @@
         width: 100%;
       }
     }
-		p {
-			margin: 20px 0 27px;
-		}
-
-	}
-	&__stats {
-		&-box {
-			background-color: $brand-color;
-			padding: 2em .8em 1.9em;
-			color: $text-color-light;
-			margin: 0 34px 0 64px;
+    p {
+      margin: 20px 0 27px;
+    }
+  }
+  &__stats {
+    &-box {
+      background-color: $brand-color;
+      padding: 2em 0.8em 1.9em;
+      color: $text-color-light;
+      margin: 0 34px 0 64px;
       border-radius: 0 0 2px 2px;
       position: relative;
       z-index: 1;
       @include tablet {
-			  margin: 0;
+        margin: 0;
         padding: 45px 50px 45px 44px;
         width: 250px;
         box-shadow: -30px 0 0 0 $brand-color;
@@ -162,65 +159,71 @@
         align-self: flex-end;
       }
       @include tablet {
-        padding: 36px 0 ;
+        padding: 36px 0;
         width: 100%;
-        box-shadow: -30px 0 0 0 $brand-color,
-                    30px 0 0 0 $brand-color;
+        box-shadow: -30px 0 0 0 $brand-color, 30px 0 0 0 $brand-color;
         transform: translateY(285px);
       }
-		}
-		&-container {
-			display:flex;
+    }
+    &-container {
+      display: flex;
       @include tablet {
         flex-direction: column;
       }
-		}
+    }
     &-item {
       margin: 25px 0 0;
-      flex:1;
+      flex: 1;
       @include tablet {
         margin: 15px 0 0;
       }
     }
-		&-number {
-			font-size: 2.5em;
-			font-family: $decor-font-stack;
+    &-number {
+      font-size: 2.5em;
+      font-family: $decor-font-stack;
       line-height: 1.2em;
       @include mobile {
-			  font-size: 2em;
+        font-size: 2em;
         line-height: 1em;
       }
-		}
-		&-category {
-			font-size: .8em;
-			font-weight: bold;
+    }
+    &-category {
+      font-size: 0.8em;
+      font-weight: bold;
       line-height: 1.2em;
       max-width: 120px;
       display: inline-block;
       @include mobile {
         max-width: 100%;
       }
-		}
-	}
-	&__image-wrap {
-		width: 595px;
-		position:relative;
-		z-index: -1;
-		img {
-			transform: translate(-94px, 73px);
-			height: 460px;
+    }
+  }
+  &__image-wrap {
+    width: 595px;
+    position: relative;
+    z-index: -1;
+    @include mobile {
+      width: calc(100% + 20px);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    img {
+      transform: translate(-94px, 73px);
+      height: 460px;
       border-radius: 0 2px 2px 0;
       @include tablet {
-			  transform: translate(30px, -20px);
-			  height: 342px;
+        transform: translate(30px, -20px);
+        height: 342px;
         border-radius: 0 0 2px 2px;
       }
       @include mobile {
-			  transform: translate(-90px, -375px);
-			  height: 320px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -375px);
+        height: 320px;
       }
-		}
-	}
+    }
+  }
 }
 
 //====== Prizes =======
@@ -228,7 +231,7 @@
 .prizes {
   padding: 188px 0 93px;
   counter-reset: item;
-  margin-left:12px;
+  margin-left: 12px;
   @include tablet {
     padding: 113px 0 93px;
     margin-left: 0;
@@ -237,7 +240,7 @@
     padding: 32px 0 25px;
     .section-subtitle {
       br {
-        display:none;
+        display: none;
       }
     }
   }
@@ -256,7 +259,7 @@
   }
   &__item {
     text-align: center;
-    flex:1;
+    flex: 1;
     @include tablet {
       flex: none;
       width: calc(100% / 3);
@@ -264,12 +267,12 @@
     @include tablet {
       flex: 1;
       width: 100%;
-      margin-bottom:18px;
+      margin-bottom: 18px;
     }
     &::before {
       counter-increment: item;
       content: "#" counter(item);
-			font-family: $decor-font-stack;
+      font-family: $decor-font-stack;
       font-size: 2.4em;
       display: block;
       margin-bottom: 20px;
@@ -280,11 +283,11 @@
       }
     }
     &.active::before {
-      color:$brand-color;
+      color: $brand-color;
     }
   }
   &__image {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 80px;
@@ -299,7 +302,7 @@
   }
   &__description {
     font-weight: 600;
-    font-size: .7em;
+    font-size: 0.7em;
     letter-spacing: 0.035em;
   }
 }
@@ -307,7 +310,7 @@
 // ===== How to =====
 
 .how-to {
-	background-color: $bg-color-light;
+  background-color: $bg-color-light;
   padding: 105px 0 150px;
   @include tablet {
     padding: 72px 0 0;
@@ -323,36 +326,35 @@
       flex-direction: column;
     }
   }
-  &__text-box{
+  &__text-box {
     width: 50%;
-		background-color: $text-color-light;
-		padding: 50px 50px 48px 48px;
-    position:relative;
-    z-index:2;
+    background-color: $text-color-light;
+    padding: 50px 50px 48px 48px;
+    position: relative;
+    z-index: 2;
     border-radius: 2px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08),
-                0 3px 6px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.08);
     @include tablet {
       width: 82%;
-		  padding: 42px 32px 45px;
+      padding: 42px 32px 45px;
     }
     @include mobile {
       width: 100%;
-		  padding: 37px 15px;
+      padding: 37px 15px;
       .button {
         width: 100%;
       }
     }
-		p {
-			margin: 20px 0 27px;
+    p {
+      margin: 20px 0 27px;
       letter-spacing: -0.0035em;
-		}
+    }
   }
   &__quote-box {
     width: 50%;
     position: relative;
     z-index: 1;
-		background-color: $brand-color;
+    background-color: $brand-color;
     box-shadow: -50px 0 0 0 $brand-color;
     transform: translateY(44px);
     padding: 24px 30px 40px 90px;
@@ -364,45 +366,44 @@
       width: 80%;
       padding: 26px 30px 43px 40px;
       transform: translateY(0);
-      box-shadow: -50px 0 0 0 $brand-color,
-                  0 -60px 0 0 $brand-color;
+      box-shadow: -50px 0 0 0 $brand-color, 0 -60px 0 0 $brand-color;
     }
     @include mobile {
       width: calc(100% + 20px);
       left: 10px;
-		  padding: 20px 16px 45px;
+      padding: 20px 16px 45px;
       box-shadow: 0 -38px 0 0 $brand-color;
     }
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 36px;
-      top:40px;
+      top: 40px;
       height: 22px;
       width: 22px;
-      background-image: url('/assets/images/right-quote.svg');
+      background-image: url("#{$base-url}/images/right-quote.svg");
       background-size: contain;
-      opacity: .5;
+      opacity: 0.5;
       @include tablet {
         left: -15px;
-        top:44px;
+        top: 44px;
       }
       @include mobile {
         left: -15px;
-        top:44px;
+        top: 44px;
         height: 80px;
         width: 80px;
         left: auto;
         right: 15px;
         top: 15px;
-        opacity: .1;
+        opacity: 0.1;
       }
     }
   }
   &__social-proof {
     display: flex;
     align-items: center;
-    position:relative;
+    position: relative;
     top: 5px;
     left: -5px;
     @include tablet {
@@ -424,20 +425,20 @@
         width: 50px;
         margin-right: 15px;
       }
-      & img{
+      & img {
         height: 100%;
         width: 100%;
       }
     }
     &__name {
       font-weight: 600;
-      font-size: .9em;
+      font-size: 0.9em;
       @include mobile {
-        font-size: .8em;
+        font-size: 0.8em;
       }
     }
     &__position {
-      font-size: .7em;
+      font-size: 0.7em;
       letter-spacing: 0.0325em;
       @include mobile {
         letter-spacing: inherit;
@@ -464,12 +465,12 @@
   &__image {
     width: 50%;
     overflow: hidden;
-    background-image: url('/assets/images/pp-office.jpg');
+    background-image: url("#{$base-url}/images/pp-office.jpg");
     background-size: cover;
     background-position: -38px 0;
     background-repeat: no-repeat;
     height: 415px;
-    box-shadow: inset -44px  0 0 $text-color-light;
+    box-shadow: inset -44px 0 0 $text-color-light;
     border-radius: 2px;
     @include tablet {
       width: 100%;
@@ -479,7 +480,7 @@
     }
     @include mobile {
       width: calc(100% + 20px);
-      position:relative;
+      position: relative;
       left: 50%;
       transform: translateX(-50%);
       height: 240px;
@@ -492,18 +493,16 @@
     @include tablet {
       width: 100%;
       padding: 60px 30px 0;
-      .button{
+      .button {
         padding-right: 8em;
       }
     }
     @include mobile {
       padding: 40px 5px 0;
-      .button{
+      .button {
         padding-right: 3em;
         width: 100%;
       }
     }
   }
 }
-
-
