@@ -7,7 +7,6 @@
     "clean": "rimraf project/build",
     "compile": "node-sass --output-style=expanded --source-map=true project/stylesheets/main.scss --watch project/build/stylesheets/main.css",
     "prefix": "postcss project/build/stylesheets/main.css --use=autoprefixer --map=false --output=project/build/stylesheets/main.css",
-    "minify": "cleancss --level=1 --source-map --source-map-inline-sources --output project/build/stylesheets/main.min.css project/build/stylesheets/main.css",
     "preview:live": "./node_modules/live-server/live-server.js project --no-browser --verbose ",
     "watch": "npm run compile && npm run prefix -- --watch",
     "dev": "parallelshell 'npm run watch' 'npm run preview:live'"
@@ -17,6 +16,7 @@
   "devDependencies": {
     "autoprefixer": "^9.6.0",
     "clean-css-cli": "^4.3.0",
+    "jquery": "^3.4.1",
     "live-server": "^1.2.1",
     "node-sass": "^4.12.0",
     "parallelshell": "^3.0.2",
