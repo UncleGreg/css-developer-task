@@ -6,9 +6,9 @@
 	&-title {
 		text-transform: uppercase;
 		letter-spacing: 0.134em;
-    color: #7f7f7f;
+    color: $text-color-gray;
     &--white {
-      color: #fff;
+      color: $text-color-light;
     }
 	}
 	&-subtitle {
@@ -16,9 +16,9 @@
 		font-weight: normal;
 		margin: 11px 0;
 		letter-spacing: -0.007em;
-    color: #333333;
+    color: $text-color-dark;
     &--white {
-      color: #fff;
+      color: $text-color-light;
     }
 	}
 }
@@ -29,10 +29,13 @@
 	background-image: url('#{$base-url}images/pp-main-background.jpg');
 	background-size: cover;
 	background-position: center center;
-	color: #fff;
+	color: $text-color-light;
 	padding: 225px 0 92px 0;
   @include tablet {
     padding: 170px 0 80px 0;
+  }
+  @include mobile {
+    padding: 92px 0 20px 0;
   }
 	h1 {
 		letter-spacing: -1.5px;
@@ -41,24 +44,37 @@
 	p {
 		margin: 1.8em auto;
 		max-width: 40em;
-		color: #fff;
+		color: $text-color-light;
 		line-height: 1.6;
 		word-spacing: .5px;
+    @include mobile {
+      margin: 1.5em auto;
+    }
 	}
 	&__button-wrap {
 		margin: 55px 0;
     @include tablet {
       margin: 40px 0;
     }
+    @include mobile {
+      margin: 23px 0 18px;
+    }
 	}
 	&__scroll-arrow {
 		display: inline-block;
-		color: #fff;
-		border: 2px solid #fff;
+		color: $text-color-light;
+		border: 2px solid $text-color-light;
 		border-radius: 50%;
 		height: 2em;
 		width: 2em;
 		position: relative;
+    transition: transform .2s;
+    @include mobile {
+      transform: scale(.8);
+    }
+    &:hover {
+      transform: scale(.9);
+    }
 		&::after {
 			content: "";
 			display: block;
@@ -69,8 +85,8 @@
 			width: 10px;
 			font-weight:bold;
 			transform: translate(-50%, -50%) rotate(45deg);
-			border-right: 3px solid #fff;
-			border-bottom: 3px solid #fff;
+			border-right: 3px solid $text-color-light;
+			border-bottom: 3px solid $text-color-light;
 		}
 
 	}
@@ -79,10 +95,10 @@
 //====== About ======
 
 .about {
-	background-color: #f5f5f5;
-  box-shadow: inset 0 -43px 0 0 #fff;
+	background-color: $bg-color-light;
+  box-shadow: inset 0 -43px 0 0 $text-color-light;
   @include tablet {
-    box-shadow: inset 0 -81px 0 0 #fff;
+    box-shadow: inset 0 -81px 0 0 $text-color-light;
   }
 	&__boxes {
 		display: flex;
@@ -91,6 +107,9 @@
       flex-direction: column;
 		  transform: translateY(70px);
     }
+    @include mobile {
+		  transform: translateY(40px);
+    }
 	}
 	&__column {
 		flex:1;
@@ -98,10 +117,13 @@
       @include tablet {
         display: flex;
       }
+      @include mobile {
+        flex-direction: column;
+      }
     }
 	}
 	&__text-box {
-		background-color: #fff;
+		background-color: $text-color-light;
 		padding: 50px 50px 48px 48px;
     border-radius: 2px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08),
@@ -111,15 +133,22 @@
     @include tablet {
       padding: 42px 30px 48px;
     }
+    @include mobile {
+      padding: 35px 17px 38px 14px;
+      .button {
+        width: 100%;
+      }
+    }
 		p {
 			margin: 20px 0 27px;
 		}
+
 	}
 	&__stats {
 		&-box {
-			background-color: #3fae49;
+			background-color: $brand-color;
 			padding: 2em .8em 1.9em;
-			color: #fff;
+			color: $text-color-light;
 			margin: 0 34px 0 64px;
       border-radius: 0 0 2px 2px;
       position: relative;
@@ -128,9 +157,16 @@
 			  margin: 0;
         padding: 45px 50px 45px 44px;
         width: 250px;
-        box-shadow: -30px 0 0 0 #3fae49;
+        box-shadow: -30px 0 0 0 $brand-color;
         transform: translateY(105px);
         align-self: flex-end;
+      }
+      @include tablet {
+        padding: 36px 0 ;
+        width: 100%;
+        box-shadow: -30px 0 0 0 $brand-color,
+                    30px 0 0 0 $brand-color;
+        transform: translateY(285px);
       }
 		}
 		&-container {
@@ -150,11 +186,20 @@
 			font-size: 2.5em;
 			font-family: $decor-font-stack;
       line-height: 1.2em;
+      @include mobile {
+			  font-size: 2em;
+        line-height: 1em;
+      }
 		}
 		&-category {
 			font-size: .8em;
 			font-weight: bold;
-      line-height:1.2em;
+      line-height: 1.2em;
+      max-width: 120px;
+      display: inline-block;
+      @include mobile {
+        max-width: 100%;
+      }
 		}
 	}
 	&__image-wrap {
@@ -170,17 +215,13 @@
 			  height: 342px;
         border-radius: 0 0 2px 2px;
       }
+      @include mobile {
+			  transform: translate(-90px, -375px);
+			  height: 320px;
+      }
 		}
 	}
 }
-
-.example {
-    transition: all .5s;
-    user-select: none;
-		display:grid;
-    background: linear-gradient(to bottom, white, black);
-}
-
 
 //====== Prizes =======
 
@@ -192,12 +233,25 @@
     padding: 113px 0 93px;
     margin-left: 0;
   }
+  @include mobile {
+    padding: 32px 0 25px;
+    .section-subtitle {
+      br {
+        display:none;
+      }
+    }
+  }
   &__list {
     display: flex;
     margin-top: 40px;
     @include tablet {
       flex-wrap: wrap;
       justify-content: center;
+    }
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 15px;
     }
   }
   &__item {
@@ -207,6 +261,11 @@
       flex: none;
       width: calc(100% / 3);
     }
+    @include tablet {
+      flex: 1;
+      width: 100%;
+      margin-bottom:18px;
+    }
     &::before {
       counter-increment: item;
       content: "#" counter(item);
@@ -215,9 +274,13 @@
       display: block;
       margin-bottom: 20px;
       color: #999999;
+      @include mobile {
+        font-size: 2em;
+        margin: 0;
+      }
     }
     &.active::before {
-      color:#3fae49;
+      color:$brand-color;
     }
   }
   &__image {
@@ -226,6 +289,13 @@
     justify-content: center;
     height: 80px;
     margin-bottom: 20px;
+    @include mobile {
+      height: 64px;
+      margin-bottom: 14px;
+      img {
+        max-height: 64px;
+      }
+    }
   }
   &__description {
     font-weight: 600;
@@ -237,11 +307,15 @@
 // ===== How to =====
 
 .how-to {
-	background-color: #f5f5f5;
+	background-color: $bg-color-light;
   padding: 105px 0 150px;
   @include tablet {
     padding: 72px 0 0;
-    box-shadow: inset 0 -120px 0 0 #fff;
+    box-shadow: inset 0 -120px 0 0 $text-color-light;
+  }
+  @include tablet {
+    padding: 40px 0 0;
+    box-shadow: inset 0 -120px 0 0 $text-color-light;
   }
   &__boxes {
     display: flex;
@@ -251,7 +325,7 @@
   }
   &__text-box{
     width: 50%;
-		background-color: #fff;
+		background-color: $text-color-light;
 		padding: 50px 50px 48px 48px;
     position:relative;
     z-index:2;
@@ -262,6 +336,13 @@
       width: 82%;
 		  padding: 42px 32px 45px;
     }
+    @include mobile {
+      width: 100%;
+		  padding: 37px 15px;
+      .button {
+        width: 100%;
+      }
+    }
 		p {
 			margin: 20px 0 27px;
       letter-spacing: -0.0035em;
@@ -271,11 +352,11 @@
     width: 50%;
     position: relative;
     z-index: 1;
-		background-color: #3fae49;
-    box-shadow: -50px 0 0 0 #3fae49;
+		background-color: $brand-color;
+    box-shadow: -50px 0 0 0 $brand-color;
     transform: translateY(44px);
     padding: 24px 30px 40px 90px;
-    color: #fff;
+    color: $text-color-light;
     align-self: flex-end;
     letter-spacing: -0.0035em;
     border-radius: 0 2px 2px 0;
@@ -283,8 +364,14 @@
       width: 80%;
       padding: 26px 30px 43px 40px;
       transform: translateY(0);
-      box-shadow: -50px 0 0 0 #3fae49,
-                  0 -60px 0 0 #3fae49;
+      box-shadow: -50px 0 0 0 $brand-color,
+                  0 -60px 0 0 $brand-color;
+    }
+    @include mobile {
+      width: calc(100% + 20px);
+      left: 10px;
+		  padding: 20px 16px 45px;
+      box-shadow: 0 -38px 0 0 $brand-color;
     }
     &::before {
       content: '';
@@ -300,6 +387,16 @@
         left: -15px;
         top:44px;
       }
+      @include mobile {
+        left: -15px;
+        top:44px;
+        height: 80px;
+        width: 80px;
+        left: auto;
+        right: 15px;
+        top: 15px;
+        opacity: .1;
+      }
     }
   }
   &__social-proof {
@@ -312,10 +409,13 @@
       left: -1px;
       top: 4px;
     }
+    @include mobile {
+      top: 9px;
+    }
     &__image {
       height: 64px;
       width: 64px;
-      background-color: #fff;
+      background-color: $text-color-light;
       border-radius: 50%;
       overflow: hidden;
       margin-right: 20px;
@@ -332,10 +432,16 @@
     &__name {
       font-weight: 600;
       font-size: .9em;
+      @include mobile {
+        font-size: .8em;
+      }
     }
     &__position {
       font-size: .7em;
       letter-spacing: 0.0325em;
+      @include mobile {
+        letter-spacing: inherit;
+      }
     }
   }
 }
@@ -346,6 +452,9 @@
   margin: 98px 0 94px;
   @include tablet {
     margin: 73px 0 70px;
+  }
+  @include mobile {
+    margin: 0 0 44px;
   }
   .contact-flex {
     @include tablet {
@@ -358,14 +467,23 @@
     background-image: url('/assets/images/pp-office.jpg');
     background-size: cover;
     background-position: -38px 0;
+    background-repeat: no-repeat;
     height: 415px;
-    box-shadow: inset -44px  0 0 #fff;
+    box-shadow: inset -44px  0 0 $text-color-light;
     border-radius: 2px;
     @include tablet {
       width: 100%;
       box-shadow: none;
       height: 360px;
       background-position: 0 -62px;
+    }
+    @include mobile {
+      width: calc(100% + 20px);
+      position:relative;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 240px;
+      background-position: 0 0;
     }
   }
   &__form {
@@ -376,6 +494,13 @@
       padding: 60px 30px 0;
       .button{
         padding-right: 8em;
+      }
+    }
+    @include mobile {
+      padding: 40px 5px 0;
+      .button{
+        padding-right: 3em;
+        width: 100%;
       }
     }
   }

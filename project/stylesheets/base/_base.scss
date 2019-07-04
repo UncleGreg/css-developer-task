@@ -7,17 +7,19 @@
  */
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 .project-overlay{
-	//background-image: url('../../assets/desktop.png');
+	background-image: url('../../assets/desktop.png');
 	//background-image: url('../../assets/tablet.png');
-	background-image: url('../../assets/mobile.png');
-	//background-size: 1904px auto;
-	//background-size: 768px auto;
-	background-size: 520px auto;
+	//background-image: url('../../assets/mob-s.png');
+	//background-image: url('../../assets/menu-m.png');
+	background-size: 1904px auto;
+	//background-size: 320px auto;
+	//background-size: 320px auto;
 	background-position: center -2px;
 	width: 100%;
-	height: 4000px;
+	height: 4500px;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -43,6 +45,7 @@ html {
  */
 a {
   text-decoration: none;
+  outline: none;
 }
 
 button {

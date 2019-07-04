@@ -7,50 +7,34 @@
 
 
 /// Regular font family
-/// @type List
 $text-font-stack: 'Raleway', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
+/// Decorative font family
 $decor-font-stack: 'Millunium Medium', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
-
-
-
+/// Copy text color
+$text-color-dark: #333;
 
 /// Copy text color
-/// @type Color
-$text-color: rgb(34, 34, 34) !default;
+$text-color-light: #fff;
+
+/// Copy text color
+$text-color-gray: #7f7f7f;
 
 /// Main brand color
-/// @type Color
-$brand-color: rgb(229, 0, 80) !default;
+$brand-color: #3fae49;
 
-/// Light grey
-/// @type Color
-$light-grey: rgb(237, 237, 237) !default;
+/// Dark background color
+$bg-color-dark: #1e3066;
 
-/// Medium grey
-/// @type Color
-$mid-grey: rgb(153, 153, 153) !default;
-
-/// Dark grey
-/// @type Color
-$dark-grey: rgb(68, 68, 68) !default;
-
-
-
-
+/// Light background color
+$bg-color-light: #f5f5f5;
 
 /// Container's maximum width
-/// @type Length
-$max-width: 1230px !default;
-
-
+$max-width: 1230px;
 
 /// Relative or absolute URL where all assets are served from
-/// @type String
-/// @example scss - When using a CDN
-///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '../../assets/' !default;
+$base-url: '../../assets/';
 
 /// RWD resolutions
 $screen-mobile: 520px;

@@ -4,34 +4,56 @@
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
 	<meta charset="UTF-8">
 	<title>CSS Developer Task</title>
+	<meta name="description" content="Zadanie rekrutacyjne na CSS Developera dla JohnnyBros" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/assets/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#1e3066">
+	<meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#1e3066">
+
 	<link rel="stylesheet" type="text/css" href="build/stylesheets/main.css">
 	<script
-			  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-			  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-			  crossorigin="anonymous"></script>
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-	<div class="project-overlay"></div>
 	<header>
 		<nav class="nav">
-			<div class="container">
-				<ul class="nav__menu">
-					<li class="nav__logo">
-						<a href="/">
-							<img src="/assets/images/jb-logo.svg" alt="johnnybros logo">
-						</a>
-					</li>
-					<li><a href="/">Home</a></li>
-					<li><a href="/">O Turnieju</a></li>
-					<li><a href="/">Nagrody</a></li>
-					<li><a href="/">Jak dołączyć</a></li>
-					<li><a href="/">Kontakt</a></li>
+			<div class="container display-flex">
+				<div class="nav__logo">
+					<a href="/">
+						<img src="/assets/images/jb-logo.svg" alt="johnnybros logo">
+					</a>
+				</div>
+				<div id="js-menu-button" class="nav__button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<ul id="js-menu" class="nav__menu">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#o-turnieju">O turnieju</a></li>
+					<li><a href="#nagrody">Nagrody</a></li>
+					<li><a href="#jak-dolaczyc">Jak dołączyć</a></li>
+					<li><a href="#kontakt">Kontakt</a></li>
 				</ul>
 			</div>
+			<div id="js-menu-overlay" class="nav__overlay"></div>
 		</nav>
 	</header>
 
-	<section class="front-page">
+	<section id="home" class="front-page">
 		<div class="container text-center">
 			<h4 class="section-title section-title--white">Turniej piłkarzyków</h4>
 		<h1 class="section-subtitle section-subtitle--white">Party Parrot Tournament</h1>
@@ -40,12 +62,12 @@
 			<button class="button">Dołącz do turnieju</button>
 		</div>
 		<div class="text-center">
-			<a href="#about" class="front-page__scroll-arrow"></a>
+			<a href="#o-turnieju" class="front-page__scroll-arrow"></a>
 		</div>
 		</div>
 	</section>
 
-	<section class="about">
+	<section id="o-turnieju" class="about">
 		<div class="container">
 			<div class="about__boxes">
 				<div class="about__column about__column--left">
@@ -64,7 +86,7 @@
 							</div>
 							<div class="about__stats-item text-center">
 								<div class="about__stats-number">1530</div>
-								<div class="about__stats-category">Strzelonych<br> bramek</div>
+								<div class="about__stats-category">Strzelonych bramek</div>
 							</div>
 							<div class="about__stats-item text-center">
 								<div class="about__stats-number">3</div>
@@ -82,7 +104,7 @@
 		</div>
 	</section>
 
-	<section class="prizes">
+	<section id="nagrody" class="prizes">
 		<div class="container">
 			<div class="text-center">
 				<h4 class="section-title">nagrody</h4>
@@ -91,31 +113,31 @@
 			<div class="prizes__list">
 				<div class="prizes__item active">
 					<div class="prizes__image">
-						<img src="/assets/images/pp-reward-1.svg" alt="">
+						<img src="/assets/images/pp-reward-1.svg" alt="ikona uscisku dłoni">
 					</div>
 					<div class="prizes__description">Uścisk dłoni <br>prezesa</div>
 				</div>		
 				<div class="prizes__item">
 					<div class="prizes__image">
-						<img src="/assets/images/pp-reward-2.svg" alt="">
+						<img src="/assets/images/pp-reward-2.svg" alt="ikona magazynu wedkarskiego">
 					</div>
 					<div class="prizes__description">Roczna prenumerata<br> gazety ,,Wędkarski<br> Świat"</div>
 				</div>		
 				<div class="prizes__item">
 					<div class="prizes__image">
-						<img src="/assets/images/pp-reward-3.svg" alt="">
+						<img src="/assets/images/pp-reward-3.svg" alt="ikona kalendarza">
 					</div>
 					<div class="prizes__description">Trial na stronie do<br> skracania linków ujeb.se</div>
 				</div>		
 				<div class="prizes__item">
 					<div class="prizes__image">
-						<img src="/assets/images/pp-reward-4.svg" alt="">
+						<img src="/assets/images/pp-reward-4.svg" alt="ikona stosu książek">
 					</div>
 					<div class="prizes__description">Licencja programu <br> WinRar</div>
 				</div>		
 				<div class="prizes__item">
 					<div class="prizes__image">
-						<img src="/assets/images/pp-reward-5.svg" alt="">
+						<img src="/assets/images/pp-reward-5.svg" alt="ikona budzika">
 					</div>
 					<div class="prizes__description">Możliwość pracy <br>po godzinach</div>
 				</div>		
@@ -123,7 +145,7 @@
 		</div>
 	</section>
 
-	<section class="how-to">
+	<section id="jak-dolaczyc" class="how-to">
 		<div class="container">
 			<div class="how-to__boxes">
 				<div class="how-to__text-box">
@@ -137,7 +159,7 @@
 					</p>
 					<div class="how-to__social-proof">
 						<div class="how-to__social-proof__image">
-							<img src="/assets/images/pp-social-proof.png" alt="">
+							<img src="/assets/images/pp-social-proof.png" alt="zdjęcie osoby">
 						</div>
 						<div>
 							<div class="how-to__social-proof__name">Jolanta</div>
@@ -148,7 +170,8 @@
 			</div>
 		</div>
 	</section>
-	<section class="contact">
+
+	<section id="kontakt" class="contact">
 		<div class="container">
 			<div class="display-flex contact-flex">
 				<div class="contact__image"></div>
@@ -157,13 +180,13 @@
 					<h3 class="section-subtitle">Napisz do nas!</h3>
 					<form action="">
 						<div class="display-flex form__row">
-							<div class="form__group">
-								<input type="imie">
-								<label for="">Imię i nazwisko</label>
+							<div class="form__group floating-label">
+								<input id="imie" type="text" name="imie" placeholder="Imię i nazwisko">
+								<label for="imie">Imię i nazwisko</label>
 							</div>
-							<div class="form__group">
-								<input type="imie">
-								<label for="">Adres e-mail</label>
+							<div class="form__group floating-label">
+								<input id="email" type="email" name="email" placeholder="Adres e-mail">
+								<label for="email">Adres e-mail</label>
 							</div>
 						</div>
 
@@ -186,6 +209,7 @@
 	</footer>
 
 	<script>
+		// fixed nav
 		$(function() {
 			var header = $(".nav");
 			$(window).scroll(function() {
@@ -193,6 +217,30 @@
 				scroll >= 100 ? header.addClass("scrolled") : header.removeClass("scrolled");
 			});
 		});	
+
+		// navigation open/close
+		$("#js-menu-button").on('click', function() {
+			var menu = $("#js-menu");
+			var button = $("#js-menu-button");
+			var overlay = $("#js-menu-overlay");
+
+			menu.toggleClass("opened");
+			button.toggleClass("opened");
+			overlay.toggleClass("opened");
+
+		});
+
+		//smooth scroll
+    $('a[href*="#"]').on('click', function(e) {
+      e.preventDefault()
+
+      $('html, body').animate(
+        {
+          scrollTop: $($(this).attr('href')).offset().top,
+        },
+        300,
+      )
+    })
 	
 	</script>
 </body>

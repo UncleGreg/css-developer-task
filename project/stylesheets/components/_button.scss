@@ -3,11 +3,20 @@
 // -----------------------------------------------------------------------------
 
 .button {
-	background-color: #3fae49;
-	color: #fff;
+	background-color: $brand-color;
+	color: $text-color-light;
 	border: none;
 	border-radius: 2px;
 	padding: .9em 5.6em;
 	font-size: 16px;
 	font-weight: 500;
+  cursor: pointer;
+  transition: background-color .2s;
+  @include mobile {
+	  padding: .7em 3.6em;
+    font-size: 15px;
+  }
+  &:hover {
+  background-color: darken( $brand-color, 10% );
+  }
 }

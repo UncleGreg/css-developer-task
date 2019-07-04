@@ -3,11 +3,14 @@
 // -----------------------------------------------------------------------------
 
 .footer {
-  background-color: #1e3066;
+  background-color: $bg-color-dark;
   &__text {
-    color: #fff;
+    color: $text-color-light;
     font-size: .7em;
     font-weight: 500;
     padding: 40px 0;
+    @include mobile {
+      padding: 34px 0;
+    }
   }
 }
