@@ -409,19 +409,6 @@ html {
   box-sizing: border-box;
   overflow-x: hidden; }
 
-.project-overlay {
-  background-image: url("../../assets/desktop.png");
-  background-size: 1904px auto;
-  background-position: center -2px;
-  width: 100%;
-  height: 4500px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  opacity: .5;
-  pointer-events: none; }
-
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
