@@ -4,11 +4,11 @@
   "description": "CSS Developer task for JohnnyBros",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf project/build",
-    "compile": "node-sass project/stylesheets/main.scss --watch project/build/stylesheets/main.css",
-    "prefix": "postcss project/build/stylesheets/main.css --use=autoprefixer  --output project/build/stylesheets/main.css",
+    "compile": "node-sass project/css/main.scss project/main.css",
+    "prefix": "postcss project/main.css -u autoprefixer -o project/main.css ",
+    "sass": "npm run compile && npm run prefix",
     "preview:live": "./node_modules/live-server/live-server.js project --no-browser --verbose ",
-    "watch": "watch 'npm run compile && npm run prefix' project/stylesheets ",
+    "watch": "watch 'npm run sass' project/css ",
     "dev": "parallelshell 'npm run watch' 'npm run preview:live'"
   },
   "author": "",

@@ -120,13 +120,7 @@
         font-size: 1.2em;
         padding-top: .5em;
         &::before {
-          width: 40px;
-        }
-        &:hover {
-          &::before {
-            transform: translate(-60px, -50%);
-            opacity: 1;
-          }
+          display: none
         }
       }
     }
