@@ -125,6 +125,9 @@
       overflow:hidden;
       left:-10px;
     }
+    @include tablet {
+      max-width: 100%;
+    }
     @include rwd-custom(680px) {
       width: calc(100% + 20px);
       left: 50%;
