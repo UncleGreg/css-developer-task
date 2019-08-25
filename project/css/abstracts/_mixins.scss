@@ -14,11 +14,16 @@
    }
 }
 
-
 // Custom devices
-@mixin rwd($screen) {
-   @media (min-width: $screen+'px') {
+@mixin rwd-custom($screen) {
+   @media (max-width: $screen) {
        @content;
    }
 }
 
+// Custom range width media
+@mixin rwd-range($min, $max) {
+   @media (min-width: $min) and (max-width: $max) {
+       @content;
+   }
+}

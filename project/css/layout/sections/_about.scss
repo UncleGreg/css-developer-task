@@ -1,0 +1,161 @@
+.about {
+  background-color: $bg-color-light;
+  box-shadow: inset 0 -43px 0 0 $text-color-light;
+  @include tablet {
+    box-shadow: inset 0 -81px 0 0 $text-color-light;
+  }
+  &__boxes {
+    display: flex;
+    transform: translateY(100px);
+    @include tablet {
+      flex-direction: column;
+      transform: translateY(70px);
+    }
+    @include rwd-custom(680px) {
+      transform: translateY(40px);
+    }
+  }
+  &__column {
+    flex: 1;
+    @include rwd-range($screen-tablet, 1200px) {
+      flex: none;
+    }
+    &--left {
+      @include rwd-range($screen-tablet, 1200px) {
+        flex: 1;
+        position: relative;
+        left: 10px;
+        top: 40px;
+      }
+      @include tablet {
+        display: flex;
+      }
+      @include rwd-custom(680px) {
+        flex-direction: column;
+      }
+    }
+  }
+  &__text-box {
+    background-color: $text-color-light;
+    padding: 50px 50px 48px 48px;
+    border-radius: 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 2;
+    @include tablet {
+      padding: 42px 30px 48px;
+    }
+    @include rwd-custom(680px) {
+      padding: 35px 17px 38px 14px;
+      .button {
+        width: 100%;
+      }
+    }
+    p {
+      margin: 20px 0 27px;
+    }
+  }
+  &__stats {
+    &-box {
+      background-color: $brand-color;
+      padding: 2em 0.8em 1.9em;
+      color: $text-color-light;
+      margin: 0 34px 0 64px;
+      border-radius: 0 0 2px 2px;
+      position: relative;
+      z-index: 1;
+      @include rwd-range($screen-tablet, 1200px) {
+        margin: 0 16px 0 16px;
+      }
+      @include tablet {
+        margin: 0;
+        padding: 45px 50px 45px 44px;
+        width: 250px;
+        box-shadow: -30px 0 0 0 $brand-color;
+        transform: translateY(120px);
+        align-self: flex-end;
+      }
+      @include rwd-custom(680px) {
+        padding: 36px 0;
+        width: 100%;
+        box-shadow: -30px 0 0 0 $brand-color, 30px 0 0 0 $brand-color;
+        transform: translateY(285px);
+      }
+    }
+    &-container {
+      display: flex;
+      @include tablet {
+        flex-direction: column;
+      }
+    }
+    &-item {
+      margin: 25px 0 0;
+      flex: 1;
+      @include tablet {
+        margin: 15px 0 0;
+      }
+    }
+    &-number {
+      font-size: 2.5em;
+      font-family: $decor-font-stack;
+      line-height: 1.2em;
+      @include mobile {
+        font-size: 2em;
+        line-height: 1em;
+      }
+    }
+    &-category {
+      font-size: 0.8em;
+      font-weight: bold;
+      line-height: 1.2em;
+      max-width: 120px;
+      display: inline-block;
+      @include rwd-custom(680px) {
+        max-width: 100%;
+      }
+    }
+  }
+  &__image-wrap {
+    width: 595px;
+    position: relative;
+    z-index: -1;
+    @include rwd-range($screen-tablet, 1200px) {
+      max-width: 35vw;
+      width: 100%;
+      overflow:hidden;
+      left:-10px;
+    }
+    @include rwd-custom(680px) {
+      width: calc(100% + 20px);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    img {
+      transform: translate(-94px, 73px);
+      height: 460px;
+      border-radius: 0 2px 2px 0;
+      @include rwd-range($screen-tablet, 1200px) {
+        height: 500px;
+      }
+      @include tablet {
+        transform: translate(30px, -20px);
+        height: 342px;
+        border-radius: 0 0 2px 2px;
+      }
+      @include rwd-custom(680px) {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -400px);
+        height: 64vw;
+      }
+      @include mobile {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -375px);
+        height: 320px;
+      }
+    }
+  }
+}
+
+

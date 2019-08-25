@@ -1,0 +1,96 @@
+.quote-box {
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  background-color: $brand-color;
+  box-shadow: -50px 0 0 0 $brand-color;
+  transform: translateY(44px);
+  padding: 24px 30px 40px 90px;
+  color: $text-color-light;
+  align-self: flex-end;
+  letter-spacing: -0.0035em;
+  border-radius: 0 2px 2px 0;
+  @include rwd-custom(1000px) {
+    width: 80%;
+    padding: 26px 30px 43px 40px;
+    transform: translateY(0);
+    box-shadow: -50px 0 0 0 $brand-color, 0 -60px 0 0 $brand-color;
+  }
+  @include mobile {
+    width: calc(100% + 20px);
+    left: 10px;
+    padding: 20px 16px 45px;
+    box-shadow: 0 -38px 0 0 $brand-color;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 36px;
+    top: 40px;
+    height: 22px;
+    width: 22px;
+    background-image: url("#{$base-url}/images/right-quote.svg");
+    background-size: contain;
+    opacity: 0.5;
+    @include rwd-custom(1000px) {
+      left: -15px;
+      top: 44px;
+    }
+    @include mobile {
+      left: -15px;
+      top: 44px;
+      height: 80px;
+      width: 80px;
+      left: auto;
+      right: 15px;
+      top: 15px;
+      opacity: 0.1;
+    }
+  }
+  &__person {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 5px;
+    left: -5px;
+    @include tablet {
+      left: -1px;
+      top: 4px;
+    }
+    @include mobile {
+      top: 9px;
+    }
+  }
+  &__image {
+    height: 64px;
+    width: 64px;
+    background-color: $text-color-light;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+    @include tablet {
+      height: 50px;
+      width: 50px;
+      margin-right: 15px;
+    }
+    & img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__name {
+    font-weight: 600;
+    font-size: 0.9em;
+    @include mobile {
+      font-size: 0.8em;
+    }
+  }
+  &__position {
+    font-size: 0.7em;
+    letter-spacing: 0.0325em;
+    @include mobile {
+      letter-spacing: inherit;
+    }
+  }
+}
+

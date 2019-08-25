@@ -1,0 +1,67 @@
+.front-page {
+  background-image: url("#{$base-url}images/pp-main-background.jpg");
+  background-size: cover;
+  background-position: center center;
+  color: $text-color-light;
+  padding: 225px 0 92px 0;
+  @include tablet {
+    padding: 170px 0 80px 0;
+  }
+  @include mobile {
+    padding: 92px 0 20px 0;
+  }
+  h1 {
+    letter-spacing: -1.5px;
+    word-spacing: 1px;
+  }
+  p {
+    margin: 1.8em auto;
+    max-width: 40em;
+    color: $text-color-light;
+    line-height: 1.6;
+    word-spacing: 0.5px;
+    @include mobile {
+      margin: 1.5em auto;
+    }
+  }
+  &__button-wrap {
+    margin: 55px 0;
+    @include tablet {
+      margin: 40px 0;
+    }
+    @include mobile {
+      margin: 23px 0 18px;
+    }
+  }
+  &__scroll-arrow {
+    display: inline-block;
+    color: $text-color-light;
+    border: 2px solid $text-color-light;
+    border-radius: 50%;
+    height: 2em;
+    width: 2em;
+    position: relative;
+    transition: transform 0.2s;
+    @include mobile {
+      transform: scale(0.8);
+    }
+    &:hover {
+      transform: scale(0.9);
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 10px;
+      width: 10px;
+      font-weight: bold;
+      transform: translate(-50%, -50%) rotate(45deg);
+      border-right: 3px solid $text-color-light;
+      border-bottom: 3px solid $text-color-light;
+    }
+  }
+}
+
+

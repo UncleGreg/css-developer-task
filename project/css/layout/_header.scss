@@ -10,22 +10,52 @@
   width: 100%;
   padding: 1.2em;
   transition: background-color .2s, padding .3s;
-  @include mobile {
-    padding: .4em;
+  @include tablet {
+    .container {
+      padding: 0 18px;
+    }
   }
   @include mobile {
-    padding:.2em;
+    padding: .4em .25em;
+    .container {
+      padding: 0 10px;
+    }
+    .nav__button {
+      width: 20px;
+      span {
+        margin: 4px 0;
+      }
+    }
   }
   &.scrolled {
     background-color: $bg-color-dark;
     box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2); 
-    padding: .8em 0 .6em;
+    padding: .8em 0 .4em;
     a::after {
       bottom: -26px;
-      transform: translateY(2px);
+      transform: translateY(-1px);
+    }
+    @include tablet {
+      padding: .4em;
+      height: 52px;
+      .container {
+        padding: 0 10px;
+      }
+      .nav__button {
+        width: 20px;
+        span {
+          margin: 4px 0;
+        }
+      }
+      .nav__logo a {
+        display: inline-block;
+        width: 32px;
+        overflow: hidden;
+        transform: scale(.9);
+      }
     }
     @include mobile {
-      padding: .3em .3em 0;
+      padding: .4em .25em;
     }
   }
   &__menu {
@@ -33,6 +63,9 @@
     li:last-of-type {
       a {
         padding-right: 0;
+        &::after{
+          width: 100%;
+        }
       }
     }	
     @include tablet {
@@ -83,7 +116,7 @@
         transition: transform .2s, opacity .2s;
       }
       &:hover::after{
-        transform: translateY(0);
+        transform: translateY(-3px);
         opacity: 1;
       }
       @include tablet {
@@ -139,7 +172,7 @@
 	}
   &__button {
     height: 50px;
-    width: 20px;
+    width: 24px;
     display: flex;
     flex-direction: column;
     position:relative;
@@ -149,13 +182,14 @@
     display: none;
     @include tablet {
       display: block;
+      height: 40px;
     }
     span {
       display: block;
       height: 3px;
       width: 100%;
       background-color: $text-color-light;
-      margin: 3px 0;
+      margin: 5px 0;
       border-radius: 1px;
       transition: .2s;
     }

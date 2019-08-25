@@ -1,0 +1,21 @@
+.section {
+  &-title {
+    text-transform: uppercase;
+    letter-spacing: 0.134em;
+    color: $text-color-gray;
+    &--white {
+      color: $text-color-light;
+    }
+  }
+  &-subtitle {
+    font-family: $decor-font-stack;
+    font-weight: normal;
+    margin: 11px 0;
+    letter-spacing: -0.007em;
+    color: $text-color-dark;
+    &--white {
+      color: $text-color-light;
+    }
+  }
+}
+

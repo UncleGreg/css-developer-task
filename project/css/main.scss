@@ -20,12 +20,20 @@
 // 4. Layout-related sections
 @import
   'layout/header',
-  'layout/footer';
+  'layout/footer',
+  'layout/section-titles',
+  'layout/sections/front-page',
+  'layout/sections/prizes',
+  'layout/sections/how-to',
+  'layout/sections/contact',
+  'layout/sections/about';
 
 // 5. Components
 @import
   'components/button',
-  'components/form';
+  'components/form',
+  'components/quote-box',
+  'components/floating-label';
 
 // 6. Page-specific styles
 @import
